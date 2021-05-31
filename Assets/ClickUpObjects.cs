@@ -6,10 +6,12 @@ public class ClickUpObjects : MonoBehaviour
 {
     public GameObject poster;
     public GameObject photo;
+    public GameObject flower;
 
-    public GameObject photoExpansion;
+
     public GameObject PosterExpansion;
     public GameObject FlowerTextPanel;
+    public GameObject photoExpansion;
     public GameObject openDoor;
 
 
@@ -19,34 +21,32 @@ public class ClickUpObjects : MonoBehaviour
         
     }
     private void OnMouseUp()
-    {
-        if (poster.GetComponent<BoxCollider2D>())
+    {   //ポスターをクリックしたとき表示
+        if (poster)
         {
             PosterExpansion.SetActive(true);
         }
-        if (photo.GetComponent<BoxCollider2D>())
+        else
         {
-            photoExpansion.SetActive(true);
-        }
-
-
-        bool dooropen = (openDoor.activeSelf == true);
-        //ゲームクリアになったとき、Door2は非アクティブからアクティブにする
-        //Door2がアクティブになったときは表示されない
-        if (dooropen)
-        {
-            //拡大下画像を非表示から表示
-            photoExpansion.SetActive(false);
             PosterExpansion.SetActive(false);
-            Debug.Log("写真拡大非表示");
         }
-        else if (!dooropen)
+        //写真をクリックしたとき表示
+        if (photo)
         {
-
-            //拡大下画像を非表示から表示
             photoExpansion.SetActive(true);
+        }
+        else
+        {
+            photoExpansion.SetActive(false);
+        }
+
+        if (poster)
+        {
             PosterExpansion.SetActive(true);
-            Debug.Log("写真拡大表示");
+        }
+        else
+        {
+            PosterExpansion.SetActive(false);
         }
 
 
