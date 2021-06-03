@@ -10,28 +10,32 @@ public class ClickUpObjects : MonoBehaviour
 
 
     public GameObject PosterExpansion;
-    public GameObject FlowerTextPanel;
+    public GameObject flowerTextPanel;
     public GameObject photoExpansion;
     public GameObject openDoor;
 
+    //ポスターのクリック判定追加
+    private bool isClickPoster = true;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
     private void OnMouseUp()
-    {   //ポスターをクリックしたとき表示
-        if (poster)
+    {  
+        
+        //ポスターをクリックしたとき表示
+        if (poster.GetComponent<BoxCollider2D>()==isClickPoster)//これだとコリダーがアクティブな時に表示されてしまう。
         {
             PosterExpansion.SetActive(true);
         }
-        else
+        else if(poster.GetComponent<BoxCollider2D>() == !isClickPoster)
         {
             PosterExpansion.SetActive(false);
         }
         //写真をクリックしたとき表示
-        if (photo)
+        if (photo.GetComponent<BoxCollider2D>())
         {
             photoExpansion.SetActive(true);
         }
@@ -39,14 +43,14 @@ public class ClickUpObjects : MonoBehaviour
         {
             photoExpansion.SetActive(false);
         }
-
-        if (poster)
+        //
+        if (flower.GetComponent<BoxCollider2D>())
         {
-            PosterExpansion.SetActive(true);
+            flowerTextPanel.SetActive(true);
         }
         else
         {
-            PosterExpansion.SetActive(false);
+            flowerTextPanel.SetActive(false);
         }
 
 

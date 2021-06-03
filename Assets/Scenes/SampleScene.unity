@@ -1339,16 +1339,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 926841985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ce15ff53f3a08419c86dd9b3c91c08, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poster: {fileID: 926841985}
-  photo: {fileID: 0}
-  flower: {fileID: 0}
-  PosterExpansion: {fileID: 1425755819}
-  FlowerTextPanel: {fileID: 0}
-  photoExpansion: {fileID: 0}
-  openDoor: {fileID: 0}
+  Object: {fileID: 1425755819}
 --- !u!61 &926841987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1980,9 +1974,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1464213428}
   - component: {fileID: 1464213427}
-  - component: {fileID: 1464213429}
   - component: {fileID: 1464213430}
-  - component: {fileID: 1464213431}
+  - component: {fileID: 1464213429}
   m_Layer: 0
   m_Name: Flower
   m_TagString: Untagged
@@ -2063,11 +2056,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464213426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87ed3b997f2b273499d403e5024ce07c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlowerTextPanel: {fileID: 98707206}
-  openDoor: {fileID: 1626817553}
+  Object: {fileID: 98707206}
 --- !u!61 &1464213430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2094,25 +2086,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 3.14}
   m_EdgeRadius: 0
---- !u!114 &1464213431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1464213426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ce15ff53f3a08419c86dd9b3c91c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poster: {fileID: 0}
-  photo: {fileID: 0}
-  flower: {fileID: 1464213426}
-  PosterExpansion: {fileID: 0}
-  FlowerTextPanel: {fileID: 98707206}
-  photoExpansion: {fileID: 0}
-  openDoor: {fileID: 0}
 --- !u!1 &1568823219
 GameObject:
   m_ObjectHideFlags: 0
@@ -2125,6 +2098,7 @@ GameObject:
   - component: {fileID: 1568823220}
   - component: {fileID: 1568823222}
   - component: {fileID: 1568823223}
+  - component: {fileID: 1568823224}
   m_Layer: 0
   m_Name: Photo
   m_TagString: Untagged
@@ -2238,9 +2212,22 @@ MonoBehaviour:
   photo: {fileID: 1568823219}
   flower: {fileID: 0}
   PosterExpansion: {fileID: 0}
-  FlowerTextPanel: {fileID: 0}
+  flowerTextPanel: {fileID: 0}
   photoExpansion: {fileID: 2094855028}
   openDoor: {fileID: 0}
+--- !u!114 &1568823224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568823219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 2094855028}
 --- !u!1 &1619551684
 GameObject:
   m_ObjectHideFlags: 0
