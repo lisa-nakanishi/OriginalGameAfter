@@ -1343,6 +1343,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 1425755819}
+  Objects: []
 --- !u!61 &926841987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2060,6 +2061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 98707206}
+  Objects: []
 --- !u!61 &1464213430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2097,7 +2099,6 @@ GameObject:
   - component: {fileID: 1568823221}
   - component: {fileID: 1568823220}
   - component: {fileID: 1568823222}
-  - component: {fileID: 1568823223}
   - component: {fileID: 1568823224}
   m_Layer: 0
   m_Name: Photo
@@ -2196,25 +2197,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.99, y: 0.89}
   m_EdgeRadius: 0
---- !u!114 &1568823223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1568823219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75ce15ff53f3a08419c86dd9b3c91c08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poster: {fileID: 0}
-  photo: {fileID: 1568823219}
-  flower: {fileID: 0}
-  PosterExpansion: {fileID: 0}
-  flowerTextPanel: {fileID: 0}
-  photoExpansion: {fileID: 2094855028}
-  openDoor: {fileID: 0}
 --- !u!114 &1568823224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2228,6 +2210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 2094855028}
+  Objects: []
 --- !u!1 &1619551684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2498,7 +2481,7 @@ GameObject:
   - component: {fileID: 1747993990}
   - component: {fileID: 1747993989}
   - component: {fileID: 1747993992}
-  - component: {fileID: 1747993993}
+  - component: {fileID: 1747993991}
   m_Layer: 0
   m_Name: CloseDoor
   m_TagString: Untagged
@@ -2570,6 +2553,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1747993991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747993988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 1316916701}
+  Objects:
+  - {fileID: 445769962}
+  - {fileID: 1228440584}
 --- !u!61 &1747993992
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2596,22 +2595,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.3, y: 6.08}
   m_EdgeRadius: 0
---- !u!114 &1747993993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1747993988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92083d9b9588fd44cbfe0374fd951850, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hidePanel: {fileID: 1316916701}
-  inputField: {fileID: 445769962}
-  button: {fileID: 1228440584}
-  photoExpansion: {fileID: 2094855028}
 --- !u!1 &1782976686
 GameObject:
   m_ObjectHideFlags: 0
