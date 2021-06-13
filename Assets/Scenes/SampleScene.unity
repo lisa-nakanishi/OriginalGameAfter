@@ -1339,11 +1339,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 926841985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
+  m_Script: {fileID: 11500000, guid: 22a1ad63c7860a4498b700f8c8572c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 1425755819}
-  Objects: []
+  Objects:
+  - {fileID: 1425755819}
 --- !u!61 &926841987
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2057,11 +2057,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1464213426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
+  m_Script: {fileID: 11500000, guid: 22a1ad63c7860a4498b700f8c8572c23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 98707206}
-  Objects: []
+  Objects:
+  - {fileID: 98707206}
 --- !u!61 &1464213430
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2209,8 +2209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 2094855028}
-  Objects: []
+  Objects:
+  - {fileID: 2094855028}
 --- !u!1 &1619551684
 GameObject:
   m_ObjectHideFlags: 0
@@ -2565,10 +2565,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d11aa816dbb1aa45ac16d94130fce91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 1316916701}
   Objects:
   - {fileID: 445769962}
   - {fileID: 1228440584}
+  - {fileID: 1316916701}
 --- !u!61 &1747993992
 BoxCollider2D:
   m_ObjectHideFlags: 0
