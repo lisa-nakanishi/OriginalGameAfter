@@ -12,8 +12,8 @@ public class ButtonCheckPass : MonoBehaviour
     public GameObject button;
     public GameObject timeText;
     public GameObject openDoor;
-    
- 
+    [SerializeField] ParticleSystem particle;
+
     //ゲームクリアしたとき、テキストを呼び出す
     void Start()
     {
@@ -29,17 +29,20 @@ public class ButtonCheckPass : MonoBehaviour
     
             //ゲームクリアのテキストを表示する
             this.gameClearText.GetComponent<Text>().text = "Clear!";
-            //入力欄を空にする
-            this.inputField.text = "";
-            //ドアや、入力画面等の削除
+
+          
+            //パーティクルを実行
+            particle.Play();
+           
+            //ドアや、入力画面等の削除,扉が開いた画像表示
             openDoor.SetActive(true);
             Destroy(closeDoor);
             Destroy(hidePanel);
             Destroy(button);
             Destroy(inputField);
             Destroy(timeText);
-       
-            //開いたドアを表示
+
+            
             
         }
         else

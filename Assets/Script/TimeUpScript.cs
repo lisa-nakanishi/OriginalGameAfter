@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TimeUpScript : MonoBehaviour
 {
+
+    [SerializeField] GameObject retryButton;
     //時間制限を設定
     public float timeValue = 180;
     public Text timeText;
@@ -27,29 +29,35 @@ public class TimeUpScript : MonoBehaviour
             timeValue = 0;
         }
         DisplayTime(timeValue);
-        //カウントダウン０になったとき、"GameOver"と表示させる
-        void DisplayTime(float timeToDisplay)
-        {
-            if (timeToDisplay < 0)
-            {
-                timeToDisplay = 0;
-                this.gameOverText.GetComponent<Text>().text = "GameOver";
-                Debug.Log("TimeUp");
-                //コリダーを無効化
-                poster.GetComponent<BoxCollider2D>().enabled = false;
-                photo.GetComponent<BoxCollider2D>().enabled = false;
-                door.GetComponent<BoxCollider2D>().enabled = false;
-                flower.GetComponent<BoxCollider2D>().enabled = false;
-            }
-
-            //分と秒を計算
-            float minutes = Mathf.FloorToInt(timeToDisplay / 60);
-            float seconds = Mathf.FloorToInt(timeToDisplay % 60);
-            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-
-        }
+        
        
     }
-   
+    //カウントダウン０になったとき、"GameOver"と表示させる
+    void DisplayTime(float timeToDisplay)
+    {
+        if (timeToDisplay < 0)
+        {
+            timeToDisplay = 0;
+            this.gameOverText.GetComponent<Text>().text = "GameOver";
+            Debug.Log("TimeUp");
+            //コリダーを無効化
+            poster.GetComponent<BoxCollider2D>().enabled = false;
+            photo.GetComponent<BoxCollider2D>().enabled = false;
+            door.GetComponent<BoxCollider2D>().enabled = false;
+            flower.GetComponent<BoxCollider2D>().enabled = false;
 
+            //3分3秒たったら実行
+            Invoke("RetryUp", 2f);
+        }
+
+        //分と秒を計算
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+    }
+    void RetryUp()
+    {
+        retryButton.SetActive(true);
+    }
 }
